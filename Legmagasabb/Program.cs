@@ -17,6 +17,8 @@ namespace Legmagasabb
             //3.
             Console.WriteLine($"3. feladat: Épületek száma: {épületek.Count} db");
 
+            //4. feladat:
+            Console.WriteLine($"4. feladat: Emeletek összege: {épületek.Sum(x => x.Emelet)}");
         }
     }
 }
