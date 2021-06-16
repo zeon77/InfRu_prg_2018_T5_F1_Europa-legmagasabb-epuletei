@@ -9,7 +9,11 @@ namespace Legmagasabb
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //2.
+            List<Épület> épületek = new List<Épület>();
+            foreach (var sor in File.ReadAllLines("legmagasabb.txt").Skip(1))
+                épületek.Add(new Épület(sor));
+
         }
     }
 }
