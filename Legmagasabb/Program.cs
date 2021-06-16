@@ -34,6 +34,9 @@ namespace Legmagasabb
             //6. feladat:
             Console.WriteLine($"6.feladat: {(épületek.Any(x => x.Ország == "Olaszország") ? "Van" : "Nincs")} olasz épület az adatok között!");
 
+            //7. feladat:
+            const double MetersToFeet = 3.280839895;
+            Console.WriteLine($"7.feladat: 666 lábnál magasabb épületek száma: {épületek.Where(x => x.Magasság * MetersToFeet > 666).Count()}");
         }
     }
 }
