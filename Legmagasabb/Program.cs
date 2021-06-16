@@ -30,6 +30,10 @@ namespace Legmagasabb
             Console.WriteLine($"\t Magasság: {LegmagasabbÉpület.Magasság}");
             Console.WriteLine($"\t Emelet: {LegmagasabbÉpület.Emelet}");
             Console.WriteLine($"\t Építés éve: {LegmagasabbÉpület.ÉpítésÉve}");
+
+            //6. feladat:
+            Console.WriteLine($"6.feladat: {(épületek.Any(x => x.Ország == "Olaszország") ? "Van" : "Nincs")} olasz épület az adatok között!");
+
         }
     }
 }
