@@ -37,6 +37,14 @@ namespace Legmagasabb
             //7. feladat:
             const double MetersToFeet = 3.280839895;
             Console.WriteLine($"7.feladat: 666 lábnál magasabb épületek száma: {épületek.Where(x => x.Magasság * MetersToFeet > 666).Count()}");
+
+            //8. feladat:
+            Console.WriteLine($"8.feladat: Ország statisztika");
+            épületek
+                .GroupBy(x => x.Ország)
+                .Select(gr => new { Ország = gr.Key, Darab = gr.Count() })
+                .OrderBy(x => x.Ország)
+                .ToList().ForEach(x => Console.WriteLine($"\t{x.Ország} - {x.Darab} db"));
         }
     }
 }
