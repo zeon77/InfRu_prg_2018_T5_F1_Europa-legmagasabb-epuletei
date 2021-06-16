@@ -45,6 +45,18 @@ namespace Legmagasabb
                 .Select(gr => new { Ország = gr.Key, Darab = gr.Count() })
                 .OrderBy(x => x.Ország)
                 .ToList().ForEach(x => Console.WriteLine($"\t{x.Ország} - {x.Darab} db"));
+
+            //9. feladat:
+            Console.WriteLine($"9.feladat: nemet.txt");
+            using (StreamWriter sw = new StreamWriter("nemet.txt"))
+            {
+                //Az egyedi (distinct) német városokat kell megkeresni, és a féjlba beleírni:
+                épületek
+                    .Where(x => x.Ország == "Németország")
+                    .GroupBy(x => x.Város)
+                    .Select(g => g.First())
+                    .ToList().ForEach(x => sw.WriteLine($"{x.Város}"));
+            }
         }
     }
 }
