@@ -14,6 +14,9 @@ namespace Legmagasabb
             foreach (var sor in File.ReadAllLines("legmagasabb.txt").Skip(1))
                 épületek.Add(new Épület(sor));
 
+            //3.
+            Console.WriteLine($"3. feladat: Épületek száma: {épületek.Count} db");
+
         }
     }
 }
