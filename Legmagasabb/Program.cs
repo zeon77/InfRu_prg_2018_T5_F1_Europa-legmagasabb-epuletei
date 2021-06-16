@@ -19,6 +19,17 @@ namespace Legmagasabb
 
             //4. feladat:
             Console.WriteLine($"4. feladat: Emeletek összege: {épületek.Sum(x => x.Emelet)}");
+
+            //5.
+            double maxMagasság = épületek.Max(y => y.Magasság);
+            var LegmagasabbÉpület = épületek.Single(x => x.Magasság == maxMagasság);
+            Console.WriteLine($"5.feladat: A legmagasabb épület adatai:");
+            Console.WriteLine($"\t Név: {LegmagasabbÉpület.Név}");
+            Console.WriteLine($"\t Város: {LegmagasabbÉpület.Város}");
+            Console.WriteLine($"\t Ország: {LegmagasabbÉpület.Ország}");
+            Console.WriteLine($"\t Magasság: {LegmagasabbÉpület.Magasság}");
+            Console.WriteLine($"\t Emelet: {LegmagasabbÉpület.Emelet}");
+            Console.WriteLine($"\t Építés éve: {LegmagasabbÉpület.ÉpítésÉve}");
         }
     }
 }
